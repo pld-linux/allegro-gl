@@ -1,18 +1,18 @@
 Summary:	The Allegro game programming library GL backend
 Summary(pl):	Wsparcie GL dla biblioteki do programowania gier Allegro
 Name:		allegro-gl
-Version:	0.2.2
+Version:	0.2.4
 Release:	1
 License:	Giftware
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/allegrogl/alleggl-%{version}.tar.gz
-# Source0-md5:	3bc932770daacf54f7715ced65bc0627
+Source0:	http://dl.sourceforge.net/allegrogl/alleggl-%{version}.tar.bz2
+# Source0-md5:	c73127de9bb118f45f4f7d29de739eae
 URL:		http://allegrogl.sourceforge.net/
 BuildRequires:	XFree86-devel
-BuildRequires:	allegro-devel
+BuildRequires:	allegro-devel >= 4.0.0
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
-Requires:	allegro
+Requires:	allegro >= 4.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		specflags	-fomit-frame-pointer
@@ -29,7 +29,7 @@ Summary:	A game programming library - header files
 Summary(pl):	Biblioteka do programowania gier - pliki nag³ówkowe
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	allegro-devel
+Requires:	allegro-devel >= 4.0.0
 
 %description devel
 AllegroGL is a cross-platform GL backend for the Allegro library.
@@ -45,7 +45,7 @@ Ten pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania
 aplikacji wykorzystuj±cych bibliotekê AllegroGL.
 
 %prep
-%setup -q -n "alleggl"
+%setup -q -n alleggl
 
 %build
 %{__aclocal}
