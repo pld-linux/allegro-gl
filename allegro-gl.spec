@@ -6,13 +6,16 @@ Release:	1
 License:	Giftware
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/allegrogl/alleggl-%{version}.tar.gz
+# Source0-md5:	3bc932770daacf54f7715ced65bc0627
 URL:		http://allegrogl.sourceforge.net/
-BuildRequires:	allegro-devel
 BuildRequires:	XFree86-devel
+BuildRequires:	allegro-devel
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
 Requires:	allegro
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		specflags	-fomit-frame-pointer
 
 %description
 AllegroGL is a cross-platform GL backend for the Allegro library.
@@ -47,8 +50,6 @@ aplikacji wykorzystuj±cych bibliotekê AllegroGL.
 %build
 %{__aclocal}
 %{__autoconf}
-TARGET_ARCH="%{rpmcflags}" export TARGET_ARCH
-# dbglib & proflib are compiled besides normlib, so it's ok to have them here
 %configure \
 	--enable-static \
 %ifnarch %{ix86}
@@ -57,11 +58,11 @@ TARGET_ARCH="%{rpmcflags}" export TARGET_ARCH
 	--disable-sse
 %endif
 
-%{__make} lib
+%{__make} lib \
+	CFLAGS="%{rpmcflags} -Wall -ffast-math"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}{,/allegrogl{,/GLext}}}
 
 install include/*.h $RPM_BUILD_ROOT%{_includedir}
