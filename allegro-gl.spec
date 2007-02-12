@@ -1,5 +1,5 @@
 Summary:	The Allegro game programming library GL backend
-Summary(pl.UTF-8):   Wsparcie GL dla biblioteki do programowania gier Allegro
+Summary(pl.UTF-8):	Wsparcie GL dla biblioteki do programowania gier Allegro
 Name:		allegro-gl
 Version:	0.2.4
 Release:	1
@@ -26,7 +26,7 @@ w aplikacjach używających biblioteki Allegro.
 
 %package devel
 Summary:	A game programming library - header files
-Summary(pl.UTF-8):   Biblioteka do programowania gier - pliki nagłówkowe
+Summary(pl.UTF-8):	Biblioteka do programowania gier - pliki nagłówkowe
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	allegro-devel >= 4.0.0
