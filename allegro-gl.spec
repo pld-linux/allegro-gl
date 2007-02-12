@@ -1,5 +1,5 @@
 Summary:	The Allegro game programming library GL backend
-Summary(pl):	Wsparcie GL dla biblioteki do programowania gier Allegro
+Summary(pl.UTF-8):   Wsparcie GL dla biblioteki do programowania gier Allegro
 Name:		allegro-gl
 Version:	0.2.4
 Release:	1
@@ -20,13 +20,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 AllegroGL is a cross-platform GL backend for the Allegro library.
 
-%description -l pl
-AllegroGL jest przeno¶n± bibliotek± dodaj±c± wsparcie GL
-w aplikacjach u¿ywaj±cych biblioteki Allegro.
+%description -l pl.UTF-8
+AllegroGL jest przenoÅ›nÄ… bibliotekÄ… dodajÄ…cÄ… wsparcie GL
+w aplikacjach uÅ¼ywajÄ…cych biblioteki Allegro.
 
 %package devel
 Summary:	A game programming library - header files
-Summary(pl):	Biblioteka do programowania gier - pliki nag³ówkowe
+Summary(pl.UTF-8):   Biblioteka do programowania gier - pliki nagÅ‚Ã³wkowe
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	allegro-devel >= 4.0.0
@@ -37,12 +37,12 @@ AllegroGL is a cross-platform GL backend for the Allegro library.
 This package contains header files neccessary for compiling
 applications using AllegroGL library.
 
-%description devel -l pl
-AllegroGL jest przeno¶n± bibliotek± dodaj±c± wsparcie GL
-w aplikacjach u¿ywaj±cych biblioteki Allegro.
+%description devel -l pl.UTF-8
+AllegroGL jest przenoÅ›nÄ… bibliotekÄ… dodajÄ…cÄ… wsparcie GL
+w aplikacjach uÅ¼ywajÄ…cych biblioteki Allegro.
 
-Ten pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania
-aplikacji wykorzystuj±cych bibliotekê AllegroGL.
+Ten pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania
+aplikacji wykorzystujÄ…cych bibliotekÄ™ AllegroGL.
 
 %prep
 %setup -q -n alleggl
