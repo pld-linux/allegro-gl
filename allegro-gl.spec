@@ -8,7 +8,7 @@ Group:		Libraries
 Source0:	http://dl.sourceforge.net/allegrogl/alleggl-%{version}.tar.bz2
 # Source0-md5:	43e5d123fa5c78ade8e9b486b4102998
 URL:		http://allegrogl.sourceforge.net/
-BuildRequires:	Mesa-libGLU-devel
+BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	allegro-devel >= 4.0.0
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
