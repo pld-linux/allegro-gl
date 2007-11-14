@@ -1,12 +1,12 @@
 Summary:	The Allegro game programming library GL backend
 Summary(pl.UTF-8):	Wsparcie GL dla biblioteki do programowania gier Allegro
 Name:		allegro-gl
-Version:	0.4.2
+Version:	0.4.3
 Release:	1
-License:	Giftware
+License:	GPL v2+ and zlib
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/allegrogl/alleggl-%{version}.tar.bz2
-# Source0-md5:	e9432c7e29d88252ad65568f3aa3b814
+# Source0-md5:	de84c6ab982499501940854893ea0dbd
 Patch0:		%{name}-mouse.patch
 Patch1:		%{name}-link.patch
 Patch2:		%{name}-libpthread.patch
