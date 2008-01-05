@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Wsparcie GL dla biblioteki do programowania gier Allegro
 Name:		allegro-gl
 Version:	0.4.3
 Release:	1
-License:	GPL v2+ and zlib
+License:	GPL v2 or zlib
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/allegrogl/alleggl-%{version}.tar.bz2
 # Source0-md5:	de84c6ab982499501940854893ea0dbd
@@ -69,7 +69,7 @@ aplikacji wykorzystujących bibliotekę AllegroGL.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}{,/allegrogl{,/GLext}}}
+install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}/allegrogl/GLext}
 
 install include/*.h $RPM_BUILD_ROOT%{_includedir}
 install include/allegrogl/*.h $RPM_BUILD_ROOT%{_includedir}/allegrogl
@@ -84,10 +84,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc readme.txt todo.txt bugs.txt
+%doc bugs.txt readme.txt todo.txt zlib.txt
 %attr(755,root,root) %{_libdir}/libagl.so
 
 %files devel
 %defattr(644,root,root,755)
 %doc howto.txt
-%{_includedir}/*
+%{_includedir}/alleggl*.h
+%{_includedir}/allegrogl
