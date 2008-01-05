@@ -71,7 +71,7 @@ aplikacji wykorzystujących bibliotekę AllegroGL.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}/allegrogl/GLext}
 
-install include/*.h $RPM_BUILD_ROOT%{_includedir}
+install include/alleggl*.h $RPM_BUILD_ROOT%{_includedir}
 install include/allegrogl/*.h $RPM_BUILD_ROOT%{_includedir}/allegrogl
 install include/allegrogl/GLext/*.h $RPM_BUILD_ROOT%{_includedir}/allegrogl/GLext
 install lib/unix/libagl.so $RPM_BUILD_ROOT%{_libdir}
