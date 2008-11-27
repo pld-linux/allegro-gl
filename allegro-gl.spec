@@ -10,7 +10,7 @@ Source0:	http://dl.sourceforge.net/allegrogl/alleggl-%{version}.tar.bz2
 Patch0:		%{name}-mouse.patch
 Patch1:		%{name}-link.patch
 Patch2:		%{name}-libpthread.patch
-URL:		http://allegrogl.sourceforge.net/
+URL:		http://sourceforge.net/projects/allegrogl/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	allegro-devel >= 4.3.1
 BuildRequires:	autoconf >= 2.53
